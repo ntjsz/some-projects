@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Created by hht on 2017/8/2.
  */
 public class StopWatch {
-    private ArrayList<Long> moments = new ArrayList<>();
+    private ArrayList<Long> moments;
     private int count = 0;
 
     /**
@@ -13,14 +13,15 @@ public class StopWatch {
      */
     private long unit = 1000;   // us
 
-    public static StopWatch getNewOne() {
-        return new StopWatch();
+    public StopWatch() {
+        moments = new ArrayList<>();
+    }
+    public StopWatch (int size) {
+        moments = new ArrayList<>(size);
     }
 
-    public void start() {
-        long current = System.nanoTime();
+    public void clear() {
         moments.clear();
-        moments.add(current);
     }
 
     public void stop() {
@@ -47,5 +48,23 @@ public class StopWatch {
         long elapse = end - start;
         count++;
         return elapse / unit;
+    }
+
+
+    public void printDetails() {
+        int count = 0;
+        int nextLine = 20;
+        while (true) {
+            long time = getNextElapse();
+            if(time < 0) {
+                return;
+            }
+
+            System.out.print(time + ", ");
+            if(count % nextLine == nextLine - 1) {
+                System.out.println();
+            }
+            count++;
+        }
     }
 }

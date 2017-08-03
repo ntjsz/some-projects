@@ -1,5 +1,5 @@
 public class Sorting {
-    public static int num = 1000;
+    public static int num = 10000;
     private int[] array;
 
     public Sorting() {
