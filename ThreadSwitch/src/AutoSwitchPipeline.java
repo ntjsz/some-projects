@@ -12,14 +12,14 @@ public class AutoSwitchPipeline extends Pipeline{
     @Override
     public void run() {
         while (!isInterrupted) {
-            Sorting sorting = from.poll();
-            if(sorting == null) {
+            Task task= from.poll();
+            if(task == null) {
                 continue;
             }
 
             stopWatch.stop();
-            sorting.sortByStraightInsertion();
-            to.offer(sorting);
+            task.phaseStart(index);
+            to.offer(task);
             stopWatch.stop();
             remainCount--;
         }

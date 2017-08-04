@@ -1,3 +1,4 @@
+import javax.sound.midi.Soundbank;
 import java.util.ArrayList;
 
 /**
@@ -10,12 +11,24 @@ public class PipelineManager {
     public int pipeNum;
     public int taskNum;
 
+    public boolean isPrintPipeline;
+    public boolean isPrintTasks;
+
     public ArrayList<Thread> threads = new ArrayList<>();
 
     public PipelineManager(int pipeNum, int taskNum) {
         this.pipeNum = pipeNum;
         this.taskNum = taskNum;
 
+        if(pipeNum == 1) {
+            isPrintPipeline = true;
+            isPrintTasks = false;
+        }
+
+        if(pipeNum > 1) {
+            isPrintPipeline = false;
+            isPrintTasks = true;
+        }
     }
 
     public void init() {
@@ -30,7 +43,7 @@ public class PipelineManager {
             pipes.add(pipeline);
         }
 
-        pools.get(0).fill(taskNum);
+        pools.get(0).fill(taskNum, pipeNum);
 
         for(int i = 0; i < pipeNum; i++) {
             Thread thread = new Thread(pipes.get(i));
@@ -61,9 +74,25 @@ public class PipelineManager {
             e.printStackTrace();
         }
 
+        if(isPrintPipeline) printPipelines();
+        if(isPrintTasks) printTasks();
+    }
+
+    private void printPipelines() {
         for (int i = 0; i < pipeNum; i++) {
             System.out.println("Pipe " + i + ":");
             pipes.get(i).stopWatch.printDetails();
+            System.out.println();
+        }
+    }
+
+    private void printTasks() {
+        System.out.println("Pipe ");
+        Pool tailPool = pools.get(pools.size() - 1);
+        for(int i = 0; i < taskNum; i++) {
+            System.out.println("Task " + i + ":");
+            Task task = tailPool.poll();
+            System.out.println(task.stopWatch.getElapseTotal());
             System.out.println();
         }
     }

@@ -5,20 +5,26 @@ import java.util.concurrent.ConcurrentLinkedQueue;
  */
 public class Pool {
 
-    private ConcurrentLinkedQueue<Sorting> queue = new ConcurrentLinkedQueue<>();
+    private ConcurrentLinkedQueue<Task> queue = new ConcurrentLinkedQueue<>();
 
-    public Sorting poll() {
+    public Task poll() {
         return queue.poll();
     }
 
-    public void offer(Sorting s) {
+    public void offer(Task s) {
         queue.offer(s);
     }
 
 
     public void fill(int size) {
         for(int i = 0; i < size; i++) {
-            queue.offer(new Sorting());
+            queue.offer(new Task(1));
+        }
+    }
+
+    public void fill(int size, int step) {
+        for(int i = 0; i < size; i++) {
+            queue.offer(new Task(step));
         }
     }
 }

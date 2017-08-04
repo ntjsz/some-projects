@@ -5,7 +5,7 @@ import java.util.ArrayList;
  */
 public class Task implements Phase{
     private ArrayList<Sorting> list = new ArrayList<>();
-    private StopWatch stopWatch = new StopWatch();
+    public StopWatch stopWatch = new StopWatch();
     private int stepNum = 0;
 
     public Task(int stepNum) {

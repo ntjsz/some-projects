@@ -3,7 +3,8 @@ public class Main {
         Main m = new Main();
         //m.testSortingOnce();
         //m.testOnePipeline();
-        m.testSomePipelines();
+        //m.testSomePipelines();
+        m.testSomeComplexPipelines();
     }
 
     public void testSortingOnce() {
@@ -64,6 +65,26 @@ public class Main {
         manager2.init();
 
         PipelineManager manager3 = new PipelineManager(1, 10);
+        manager3.init();
+
+        manager0.start();
+        manager1.start();
+        manager2.start();
+        manager3.start();
+    }
+
+
+    public void testSomeComplexPipelines() {
+        PipelineManager manager0 = new PipelineManager(5, 10);
+        manager0.init();
+
+        PipelineManager manager1 = new PipelineManager(5, 10);
+        manager1.init();
+
+        PipelineManager manager2 = new PipelineManager(5, 10);
+        manager2.init();
+
+        PipelineManager manager3 = new PipelineManager(5, 10);
         manager3.init();
 
         manager0.start();
