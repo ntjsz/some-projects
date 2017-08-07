@@ -14,6 +14,7 @@ public class PipelineManager {
     public boolean isPrintPipeline;
     public boolean isPrintTasks;
 
+    public boolean isManu = false;
     public ArrayList<Thread> threads = new ArrayList<>();
 
     public PipelineManager(int pipeNum, int taskNum) {
@@ -31,13 +32,23 @@ public class PipelineManager {
         }
     }
 
+    public PipelineManager(int pipeNum, int taskNum, boolean isManu) {
+        this(pipeNum, taskNum);
+        this.isManu = isManu;
+    }
+
     public void init() {
         for(int i = 0; i < pipeNum + 1; i++) {
             pools.add(new Pool());
         }
 
         for(int i = 0; i < pipeNum; i++) {
-            Pipeline pipeline = getPipeline(i);
+            Pipeline pipeline;
+            if(isManu) {
+                pipeline = getManuPipeline(i);
+            } else {
+                pipeline = getPipeline(i);
+            }
             pipeline.setFrom(pools.get(i));
             pipeline.setTo(pools.get(i + 1));
             pipes.add(pipeline);
@@ -99,5 +110,9 @@ public class PipelineManager {
 
     private Pipeline getPipeline(int index) {
         return new AutoSwitchPipeline(index, taskNum);
+    }
+
+    private Pipeline getManuPipeline(int index) {
+        return new ManuSwitchPipeline(index, taskNum);
     }
 }

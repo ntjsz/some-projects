@@ -4,7 +4,9 @@ public class Main {
         //m.testSortingOnce();
         //m.testOnePipeline();
         //m.testSomePipelines();
-        m.testSomeComplexPipelines();
+        //m.testSomeComplexPipelines();
+        //m.testSomeComplexPipelinesManu();
+        m.testTwoRaceThread();
     }
 
     public void testSortingOnce() {
@@ -91,5 +93,33 @@ public class Main {
         manager1.start();
         manager2.start();
         manager3.start();
+    }
+
+
+    public void testSomeComplexPipelinesManu() {
+        PipelineManager manager0 = new PipelineManager(5, 10, true);
+        manager0.init();
+
+        PipelineManager manager1 = new PipelineManager(5, 10, true);
+        manager1.init();
+
+        PipelineManager manager2 = new PipelineManager(5, 10, true);
+        manager2.init();
+
+        PipelineManager manager3 = new PipelineManager(5, 10, true);
+        manager3.init();
+
+        manager0.start();
+        manager1.start();
+        manager2.start();
+        manager3.start();
+    }
+
+
+    public void testTwoRaceThread() {
+        Thread t0 = new Thread(new RaceThread());
+        Thread t1 = new Thread(new RaceThread());
+        t0.start();
+        t1.start();
     }
 }

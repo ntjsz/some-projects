@@ -11,7 +11,7 @@ public class StopWatch {
      * 1000 - us
      * 1000_000 - ms
      */
-    private long unit = 1000;   // us
+    private long unit = 1000_000;   // us
 
     public StopWatch() {
         moments = new ArrayList<>();
@@ -66,5 +66,13 @@ public class StopWatch {
             }
             count++;
         }
+    }
+
+
+    public long getTailElapse() {
+        if(moments.size() < 2) {
+            return -1;
+        }
+        return (moments.get(moments.size() - 1) - moments.get(moments.size() - 2)) / unit;
     }
 }
