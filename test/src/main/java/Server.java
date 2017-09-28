@@ -1,17 +1,14 @@
+import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
-import java.nio.channels.SocketChannel;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import java.nio.channels.*;
+import java.util.*;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 import static java.nio.channels.SelectionKey.OP_ACCEPT;
 
 public class Server {
 
-    List<Info> infoList = new LinkedList<>();
+    Queue<Info> infoList = new ConcurrentLinkedQueue<>();
 
     public void server() throws Exception {
         ServerSocketChannel channel = ServerSocketChannel.open();
@@ -20,16 +17,29 @@ public class Server {
 
         Selector selector = Selector.open();
         channel.register(selector, OP_ACCEPT);
+       // channel.register(selector, OP);
 
         while (selector.select() > 0) {
             Info info = new Info();
             Set<SelectionKey> keys = selector.selectedKeys();
             info.keySize = keys.size();
 
-            keys.stream().forEach(k -> {
+            Iterator<SelectionKey> iterator = keys.iterator();
+            while (iterator.hasNext()) {
+                SelectionKey k = iterator.next();
                 info.list.add(k.readyOps());
-            });
-            infoList.add(info);
+                try {
+
+                    SelectableChannel socketChannel = k.channel();
+                    if(socketChannel instanceof ServerSocketChannel) {
+                        ((ServerSocketChannel) socketChannel).accept();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                iterator.remove();
+            }
+            infoList.offer(info);
         }
 
         channel.close();
@@ -45,12 +55,6 @@ public class Server {
                 e.printStackTrace();
             }
         }).start();
-
-
-        while (true) {
-            w();
-            System.out.println(s.infoList);
-        }
     }
 
     public static void w() {

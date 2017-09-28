@@ -1,13 +1,5 @@
 import java.net.InetSocketAddress;
-import java.nio.channels.SelectionKey;
-import java.nio.channels.Selector;
-import java.nio.channels.ServerSocketChannel;
 import java.nio.channels.SocketChannel;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
-
-import static java.nio.channels.SelectionKey.*;
 
 public class Client {
     public SocketChannel client() throws Exception {
@@ -20,7 +12,8 @@ public class Client {
     public static void main(String[] args) {
         Client c = new Client();
         try {
-            c.client();
+            SocketChannel channel = c.client();
+            System.out.println("local: " + channel.getLocalAddress() + ", remote: " + channel.getRemoteAddress());
             System.in.read();
         } catch (Exception e) {
             e.printStackTrace();
