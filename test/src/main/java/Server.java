@@ -1,10 +1,11 @@
 import java.io.IOException;
 import java.net.InetSocketAddress;
+import java.nio.ByteBuffer;
 import java.nio.channels.*;
 import java.util.*;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
-import static java.nio.channels.SelectionKey.OP_ACCEPT;
+import static java.nio.channels.SelectionKey.*;
 
 public class Server {
 
@@ -17,32 +18,45 @@ public class Server {
 
         Selector selector = Selector.open();
         channel.register(selector, OP_ACCEPT);
-       // channel.register(selector, OP);
 
-        while (selector.select() > 0) {
-            Info info = new Info();
-            Set<SelectionKey> keys = selector.selectedKeys();
-            info.keySize = keys.size();
+        while (true) {
+            if (selector.select() > 0) {
+                Info info = new Info();
+                Set<SelectionKey> keys = selector.selectedKeys();
+                info.keySize = keys.size();
 
-            Iterator<SelectionKey> iterator = keys.iterator();
-            while (iterator.hasNext()) {
-                SelectionKey k = iterator.next();
-                info.list.add(k.readyOps());
-                try {
+                Iterator<SelectionKey> iterator = keys.iterator();
+                while (iterator.hasNext()) {
+                    SelectionKey k = iterator.next();
+                    info.list.add(k.readyOps());
+                    try {
 
-                    SelectableChannel socketChannel = k.channel();
-                    if(socketChannel instanceof ServerSocketChannel) {
-                        ((ServerSocketChannel) socketChannel).accept();
+                        SelectableChannel socketChannel = k.channel();
+                        if(socketChannel instanceof ServerSocketChannel) {
+                            SocketChannel c = ((ServerSocketChannel) socketChannel).accept();
+                            c.configureBlocking(false);
+                            c.register(selector, OP_READ | OP_CONNECT);
+                        }
+
+                        if(socketChannel instanceof SocketChannel) {
+                            if(k.isReadable()) {
+                                SocketChannel c = (SocketChannel) k.channel();
+                                ByteBuffer b = ByteBuffer.allocate(1);
+                                c.read(b);
+                                System.out.println(b.toString());
+                            }
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
+                    iterator.remove();
                 }
-                iterator.remove();
+                infoList.offer(info);
             }
-            infoList.offer(info);
         }
 
-        channel.close();
+
+        //channel.close();
     }
 
     public static void main(String[] args) {

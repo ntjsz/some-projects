@@ -1,22 +1,31 @@
-import java.net.InetSocketAddress;
+import java.io.InputStream;
+import java.net.SocketAddress;
+import java.net.URL;
+import java.net.URLConnection;
 import java.nio.channels.SocketChannel;
 
+
 public class Client {
-    public SocketChannel client() throws Exception {
-        SocketChannel channel = SocketChannel.open();
-        channel.connect(new InetSocketAddress("127.0.0.1", 9898));
-        return channel;
-    }
 
 
     public static void main(String[] args) {
-        Client c = new Client();
+
         try {
-            SocketChannel channel = c.client();
-            System.out.println("local: " + channel.getLocalAddress() + ", remote: " + channel.getRemoteAddress());
-            System.in.read();
+            URL url = new URL("http://127.0.0.1:8080/zone_sd/js/sd.sql");
+            URLConnection connection = url.openConnection();
+            InputStream inputStream = connection.getInputStream();
+
+            byte[] buffer = new byte[1024];
+
+            int count;
+            while ((count = inputStream.read(buffer)) > 0) {
+                System.out.write(buffer, 0, count);
+            }
+
+            inputStream.close();
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }
