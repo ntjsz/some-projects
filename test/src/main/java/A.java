@@ -1,6 +1,30 @@
 import java.util.*;
 
 public class A {
+    private int d = 1;
+    private int a = 1;
+    private boolean haha;
+
+    protected int getD() {
+        return d;
+    }
+
+    public boolean isHaha() {
+        return haha;
+    }
+
+    public A() {
+
+    }
+
+    public A(boolean a) {
+        this.haha = a;
+    }
+
+    public void setHaha(boolean haha) {
+        this.haha = haha;
+    }
+
     static Random r = new Random();
     public static void main(String[] args) {
         ArrayList<Integer> warm = new ArrayList<>();
@@ -56,5 +80,13 @@ public class A {
             }
         }
         return count;
+    }
+
+    protected void print() {
+        System.out.println(getD());
+    }
+
+    public void pPrint() {
+        print();
     }
 }

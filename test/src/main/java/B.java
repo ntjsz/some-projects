@@ -3,9 +3,16 @@ import java.util.Comparator;
 import java.util.List;
 
 public class B extends A {
+    private int d = 3;
     public int index1;
     public int index2;
     public int index3;
+
+    B() {}
+
+    protected int getD() {
+        return d;
+    }
 
     public B(int index1, int index2, int index3) {
         this.index1 = index1;
