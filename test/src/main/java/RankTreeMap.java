@@ -448,10 +448,10 @@ public class RankTreeMap<K, V>
                 parent = t;
                 cmp = cpr.compare(key, t.key);
                 if (cmp < 0) {
-                    t.addOne();
+                    t.addOneTreeSize();
                     t = t.left;
                 } else if (cmp > 0) {
-                    t.addOne();
+                    t.addOneTreeSize();
                     t = t.right;
                 } else {
                     return t.setValue(value);
@@ -466,10 +466,10 @@ public class RankTreeMap<K, V>
                 parent = t;
                 cmp = k.compareTo(t.key);
                 if (cmp < 0) {
-                    t.addOne();
+                    t.addOneTreeSize();
                     t = t.left;
                 } else if (cmp > 0) {
-                    t.addOne();
+                    t.addOneTreeSize();
                     t = t.right;
                 } else {
                     return t.setValue(value);
@@ -2182,7 +2182,7 @@ public class RankTreeMap<K, V>
             return key + "=" + value;
         }
 
-        private void addOne() {
+        private void addOneTreeSize() {
             this.size += 1;
         }
     }
@@ -2315,7 +2315,8 @@ public class RankTreeMap<K, V>
     public static void main(String[] args) {
         RankTreeMap<Integer, String> map = new RankTreeMap<>();
         List<Integer> list = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
+        int max = 1000;
+        for (int i = 0; i < max; i++) {
             list.add(i);
         }
 
@@ -2329,35 +2330,18 @@ public class RankTreeMap<K, V>
             map.put(i, null);
         }
 
-        boolean b = true;
+        int num = 60;
+        Random random = new Random();
+        for(int i = 0; i < num; i++) {
+            map.remove(random.nextInt(max));
+        }
+
+        int rank = 0;
         for (Map.Entry<Integer, String> entry : map.entrySet()) {
-            if (entry.getKey() != RankTreeMap.getRank(entry)) {
-                b = false;
-                break;
+            if(RankTreeMap.getRank(entry) != rank++) {
+                System.out.println("a");
             }
         }
-        System.out.println(b);
-    }
-
-    private boolean cc() {
-        if (root == null) return true;
-        return sc(root);
-    }
-
-    private boolean sc(Entry<K, V> e) {
-        if (e == null) return true;
-        return c(e) && sc(e.left) && sc(e.right);
-    }
-
-    private boolean c(Entry<K, V> e) {
-        if (e == null) return true;
-        return e.size == subt(e);
-    }
-
-    private int subt(Entry<K, V> e) {
-        if (e == null) return 0;
-
-        return subt(e.left) + subt(e.right) + 1;
     }
 
 
@@ -2449,6 +2433,9 @@ public class RankTreeMap<K, V>
         Entry<K, V> replacement = (p.left != null ? p.left : p.right);
 
         if (replacement != null) {
+            //fix p's parents tree size
+            reduceOneTreeSize(p);
+
             // Link replacement to parent
             replacement.parent = p.parent;
             if (p.parent == null)
@@ -2470,6 +2457,9 @@ public class RankTreeMap<K, V>
             if (p.color == BLACK)
                 fixAfterDeletion(p);
 
+            //fix p's parents tree size
+            reduceOneTreeSize(p);
+
             if (p.parent != null) {
                 if (p == p.parent.left)
                     p.parent.left = null;
@@ -2477,6 +2467,16 @@ public class RankTreeMap<K, V>
                     p.parent.right = null;
                 p.parent = null;
             }
+
+        }
+    }
+
+    private void reduceOneTreeSize(Entry<K, V> e) {
+        if(e == null)   return;
+        Entry<K, V> p = e.parent;
+        while (p != null) {
+            p.size -= 1;
+            p = p.parent;
         }
     }
 
