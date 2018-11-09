@@ -1,3 +1,5 @@
+package rank;
+
 import java.io.Serializable;
 import java.util.*;
 import java.util.function.BiConsumer;
@@ -175,6 +177,11 @@ public class RankTreeMap<K, V>
     public V get(Object key) {
         Entry<K, V> p = getEntry(key);
         return (p == null ? null : p.value);
+    }
+
+    public int rank(Object key) {
+        Entry<K, V> p = getEntry(key);
+        return (p == null ? -1 : p.getRank());
     }
 
     public Comparator<? super K> comparator() {
@@ -448,10 +455,8 @@ public class RankTreeMap<K, V>
                 parent = t;
                 cmp = cpr.compare(key, t.key);
                 if (cmp < 0) {
-                    t.addOneTreeSize();
                     t = t.left;
                 } else if (cmp > 0) {
-                    t.addOneTreeSize();
                     t = t.right;
                 } else {
                     return t.setValue(value);
@@ -466,16 +471,17 @@ public class RankTreeMap<K, V>
                 parent = t;
                 cmp = k.compareTo(t.key);
                 if (cmp < 0) {
-                    t.addOneTreeSize();
                     t = t.left;
                 } else if (cmp > 0) {
-                    t.addOneTreeSize();
                     t = t.right;
                 } else {
                     return t.setValue(value);
                 }
             } while (t != null);
         }
+        //fix parent & parent's parents tree size
+        fixTreeSize(parent, 1);
+
         Entry<K, V> e = new Entry<>(key, value, parent);
         if (cmp < 0)
             parent.left = e;
@@ -679,7 +685,9 @@ public class RankTreeMap<K, V>
         return keyOrNull(getHigherEntry(key));
     }
 
-    //Ranks
+    /**
+     * entry的key会在remove时变化，此方法谨慎使用
+     */
     public static <K, V> int getRank(Map.Entry<K, V> entry) {
         if (!(entry instanceof RankTreeMap.Entry)) {
             throw new UnsupportedOperationException("entry is not instanceof RankTreeMap.Entry");
@@ -2181,10 +2189,6 @@ public class RankTreeMap<K, V>
         public String toString() {
             return key + "=" + value;
         }
-
-        private void addOneTreeSize() {
-            this.size += 1;
-        }
     }
 
     /**
@@ -2332,13 +2336,13 @@ public class RankTreeMap<K, V>
 
         int num = 60;
         Random random = new Random();
-        for(int i = 0; i < num; i++) {
+        for (int i = 0; i < num; i++) {
             map.remove(random.nextInt(max));
         }
 
         int rank = 0;
         for (Map.Entry<Integer, String> entry : map.entrySet()) {
-            if(RankTreeMap.getRank(entry) != rank++) {
+            if (RankTreeMap.getRank(entry) != rank++) {
                 System.out.println("a");
             }
         }
@@ -2433,8 +2437,8 @@ public class RankTreeMap<K, V>
         Entry<K, V> replacement = (p.left != null ? p.left : p.right);
 
         if (replacement != null) {
-            //fix p's parents tree size
-            reduceOneTreeSize(p);
+            //fix p's parents (exclude p) tree size
+            fixTreeSize(p.parent, -1);
 
             // Link replacement to parent
             replacement.parent = p.parent;
@@ -2457,8 +2461,8 @@ public class RankTreeMap<K, V>
             if (p.color == BLACK)
                 fixAfterDeletion(p);
 
-            //fix p's parents tree size
-            reduceOneTreeSize(p);
+            //fix p's parents (exclude p) tree size
+            fixTreeSize(p.parent, -1);
 
             if (p.parent != null) {
                 if (p == p.parent.left)
@@ -2471,12 +2475,10 @@ public class RankTreeMap<K, V>
         }
     }
 
-    private void reduceOneTreeSize(Entry<K, V> e) {
-        if(e == null)   return;
-        Entry<K, V> p = e.parent;
-        while (p != null) {
-            p.size -= 1;
-            p = p.parent;
+    private void fixTreeSize(Entry<K, V> e, int i) {
+        while (e != null) {
+            e.size += i;
+            e = e.parent;
         }
     }
 

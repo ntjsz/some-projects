@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0526271c-b91d-46d4-9721-72e45614a4e6" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/test/src/main/java/rank/test/PerformanceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/src/main/java/rank/test/ValidTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/RankTreeMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/java/RankTreeMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/rbtree/RedBlackBST.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/src/main/java/RankTreeMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/test/target/" />
@@ -17,53 +19,145 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="A.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/src/main/java/A.java">
+      <file leaf-file-name="RankTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="714">
+              <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#415#603#0" expanded="true" />
+                <element signature="e#415#603#0" expanded="true" />
+                <element signature="e#415#603#0" expanded="true" />
+                <element signature="e#415#603#0" expanded="true" />
+                <element signature="e#415#603#0" expanded="true" />
+                <element signature="method#testRemoce#0;class#RankTest#0" />
+                <element signature="e#721#977#0" expanded="true" />
+                <element signature="e#721#977#0" expanded="true" />
+                <element signature="e#721#977#0" expanded="true" />
+                <element signature="e#721#977#0" expanded="true" />
+                <element signature="e#721#977#0" expanded="true" />
+                <element signature="method#performancePut#0;class#RankTest#0" />
+                <element signature="e#1082#1350#0" expanded="true" />
+                <element signature="e#1082#1350#0" expanded="true" />
+                <element signature="e#1082#1350#0" expanded="true" />
+                <element signature="e#1082#1350#0" expanded="true" />
+                <element signature="e#1082#1350#0" expanded="true" />
+                <element signature="method#performanceRemove#0;class#RankTest#0" />
+                <element signature="e#1527#1801#0" expanded="true" />
+                <element signature="e#1527#1801#0" expanded="true" />
+                <element signature="e#1527#1801#0" expanded="true" />
+                <element signature="e#1527#1801#0" expanded="true" />
+                <element signature="e#1527#1801#0" expanded="true" />
+                <element signature="e#1976#2246#0" expanded="true" />
+                <element signature="e#1976#2246#0" expanded="true" />
+                <element signature="e#1976#2246#0" expanded="true" />
+                <element signature="e#1976#2246#0" expanded="true" />
+                <element signature="e#1976#2246#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RankTreeMap.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/src/main/java/RankTreeMap.java">
+      <file leaf-file-name="PerformanceTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/PerformanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-171">
-              <caret line="2437" lean-forward="true" selection-start-line="2437" selection-end-line="2437" />
+            <state relative-caret-position="711">
+              <caret line="122" column="21" lean-forward="true" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3954#4009#0" expanded="true" />
-                <element signature="e#3954#4009#0" expanded="true" />
-                <element signature="e#71580#71626#0" expanded="true" />
-                <element signature="e#71580#71626#0" expanded="true" />
-                <element signature="e#75209#75210#0" expanded="true" />
-                <element signature="e#75261#75262#0" expanded="true" />
-                <element signature="e#76922#76975#0" expanded="true" />
-                <element signature="e#76922#76975#0" expanded="true" />
-                <element signature="e#76922#76975#0" expanded="true" />
-                <element signature="e#77135#77312#0" expanded="true" />
-                <element signature="e#77135#77312#0" expanded="true" />
-                <element signature="e#80510#80543#0" expanded="true" />
-                <element signature="e#80510#80543#0" expanded="true" />
-                <element signature="e#80245#81474#0" expanded="true" />
-                <element signature="e#80245#81474#0" expanded="true" />
-                <element signature="e#80901#81474#0" expanded="true" />
-                <element signature="e#80901#81474#0" expanded="true" />
-                <element signature="e#81608#81688#0" expanded="true" />
-                <element signature="e#81608#81688#0" expanded="true" />
-                <element signature="e#81787#84004#0" expanded="true" />
-                <element signature="e#81787#84004#0" expanded="true" />
-                <element signature="e#81947#82174#0" expanded="true" />
-                <element signature="e#81947#82174#0" expanded="true" />
-                <element signature="e#108954#109219#0" expanded="true" />
-                <element signature="e#109111#109146#0" expanded="true" />
+                <element signature="e#1789#1806#0" expanded="true" />
+                <element signature="e#2124#2266#0" expanded="true" />
+                <element signature="e#2124#2266#0" expanded="true" />
+                <element signature="e#2124#2266#0" expanded="true" />
+                <element signature="e#2201#2216#0" expanded="true" />
+                <element signature="e#2124#2266#0" expanded="true" />
+                <element signature="e#2201#2216#0" expanded="true" />
+                <element signature="e#2325#2523#0" expanded="true" />
+                <element signature="e#2325#2523#0" expanded="true" />
+                <element signature="e#2325#2523#0" expanded="true" />
+                <element signature="e#2325#2523#0" expanded="true" />
+                <element signature="e#2429#2513#0" expanded="true" />
+                <element signature="e#2448#2463#0" expanded="true" />
+                <element signature="e#2448#2463#0" expanded="true" />
+                <element signature="e#2429#2513#0" expanded="true" />
+                <element signature="e#2724#2741#0" expanded="true" />
+                <element signature="e#3130#3468#0" expanded="true" />
+                <element signature="e#3130#3468#0" expanded="true" />
+                <element signature="e#3130#3468#0" expanded="true" />
+                <element signature="e#3130#3468#0" expanded="true" />
+                <element signature="e#3234#3458#0" expanded="true" />
+                <element signature="e#3254#3269#0" expanded="true" />
+                <element signature="e#3254#3269#0" expanded="true" />
+                <element signature="e#3234#3458#0" expanded="true" />
+                <element signature="e#3315#3444#0" expanded="true" />
+                <element signature="e#3315#3444#0" expanded="true" />
+                <element signature="e#3370#3398#0" expanded="true" />
+                <element signature="e#3374#3390#0" expanded="true" />
+                <element signature="e#3374#3390#0" expanded="true" />
+                <element signature="e#3370#3398#0" expanded="true" />
+                <element signature="e#3695#3712#0" expanded="true" />
+                <element signature="e#3944#3957#0" expanded="true" />
+                <element signature="e#3944#3957#0" expanded="true" />
+                <element signature="e#4049#4260#0" expanded="true" />
+                <element signature="e#4049#4260#0" expanded="true" />
+                <element signature="e#4049#4260#0" expanded="true" />
+                <element signature="e#4049#4260#0" expanded="true" />
+                <element signature="e#4161#4250#0" expanded="true" />
+                <element signature="e#4180#4195#0" expanded="true" />
+                <element signature="e#4180#4195#0" expanded="true" />
+                <element signature="e#4161#4250#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/ValidTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-231">
+              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankTreeMap.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="207">
+              <caret line="183" column="41" lean-forward="true" selection-start-line="183" selection-start-column="41" selection-end-line="183" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#16777#16913#0" expanded="true" />
+                <element signature="e#16777#16913#0" expanded="true" />
+                <element signature="e#16877#16894#0" expanded="true" />
+                <element signature="e#16877#16894#0" expanded="true" />
+                <element signature="e#24119#24162#0" expanded="true" />
+                <element signature="e#77044#77130#0" expanded="true" />
+                <element signature="e#77044#77130#0" expanded="true" />
+                <element signature="e#77044#77130#0" expanded="true" />
+                <element signature="e#77044#77130#0" expanded="true" />
+                <element signature="e#77044#77130#0" expanded="true" />
+                <element signature="e#77232#77330#0" expanded="true" />
+                <element signature="e#77232#77330#0" expanded="true" />
+                <element signature="e#81605#81685#0" expanded="true" />
+                <element signature="e#81605#81685#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,6 +166,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/test/src/main/java/RankTreeMap.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/RankTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/ranktest/RankValidPutTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/RankValidPutTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/test/RankValidPutTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/test/RankValidRemoveTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/test/RankValidTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/test/PerformanceTest.java" />
+        <option value="$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java" />
       </list>
     </option>
   </component>
@@ -94,8 +197,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1866" />
-    <option name="y" value="-8" />
+    <option name="x" value="-1860" />
+    <option name="y" value="-20" />
     <option name="width" value="1874" />
     <option name="height" value="1096" />
   </component>
@@ -152,6 +255,62 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rank" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="rank" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="some-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="&lt; 1.8 &gt;" type="70bed36:NamedLibraryElementNode" />
+              <item name="rt.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+              <item name="function" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -184,12 +343,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RankTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
+    <configuration name="RankTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="rank.test.RankTest" />
+      <module name="test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="rank.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+    </configuration>
     <configuration name="RankTreeMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="RankTreeMap" />
+      <option name="MAIN_CLASS_NAME" value="rank.RankTreeMap" />
       <module name="test" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -234,8 +404,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.RankTreeMap" />
+      <item itemvalue="Application.RankTest" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.RankTest" />
         <item itemvalue="Application.RankTreeMap" />
       </list>
     </recent_temporary>
@@ -258,12 +433,12 @@
       <workItem from="1541402165477" duration="916000" />
       <workItem from="1541433417767" duration="2618000" />
       <workItem from="1541557634486" duration="1679000" />
-      <workItem from="1541667142328" duration="3489000" />
+      <workItem from="1541667142328" duration="18919000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8702000" />
+    <option name="totallyTimeSpent" value="24132000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1866" y="-8" width="1874" height="1096" extended-state="6" />
@@ -299,6 +474,20 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>RankTreeMap.getRank(entry)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/test/src/main/java/A.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -307,37 +496,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/main/java/RankTreeMap.java">
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45570">
           <caret line="2442" column="26" lean-forward="true" selection-start-line="2442" selection-start-column="26" selection-end-line="2442" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#75209#75210#0" expanded="true" />
-            <element signature="e#75261#75262#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#108954#109219#0" expanded="true" />
-            <element signature="e#109111#109146#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#24119#24162#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -349,37 +527,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/main/java/RankTreeMap.java">
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45696">
           <caret line="2448" column="42" selection-start-line="2448" selection-start-column="42" selection-end-line="2448" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#75209#75210#0" expanded="true" />
-            <element signature="e#75261#75262#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#108954#109219#0" expanded="true" />
-            <element signature="e#109111#109146#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#24119#24162#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -391,36 +558,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/main/java/RankTreeMap.java">
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#75209#75210#0" expanded="true" />
-            <element signature="e#75261#75262#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#108954#109219#0" expanded="true" />
-            <element signature="e#109111#109146#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#24119#24162#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -442,37 +598,194 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/src/main/java/RankTreeMap.java">
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/RankTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-171">
-          <caret line="2437" lean-forward="true" selection-start-line="2437" selection-end-line="2437" />
+        <state relative-caret-position="21">
+          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/Random.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="387" selection-start-line="387" selection-end-line="387" />
+          <folding>
+            <element signature="e#14923#14996#0" expanded="true" />
+            <element signature="e#14923#14996#0" expanded="true" />
+            <element signature="e#14923#14996#0" expanded="true" />
+            <element signature="e#14995#14996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/RankValidRemoveTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#3954#4009#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#71580#71626#0" expanded="true" />
-            <element signature="e#75209#75210#0" expanded="true" />
-            <element signature="e#75261#75262#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#76922#76975#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#77135#77312#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80510#80543#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80245#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#80901#81474#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81608#81688#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81787#84004#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#81947#82174#0" expanded="true" />
-            <element signature="e#108954#109219#0" expanded="true" />
-            <element signature="e#109111#109146#0" expanded="true" />
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#354#574#0" expanded="true" />
+            <element signature="e#354#574#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/function/UnaryOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/function/Function.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/function/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/function/BiConsumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="44" column="17" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_172/src.zip!/java/util/function/Supplier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="40" column="17" selection-start-line="40" selection-start-column="17" selection-end-line="40" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="183" column="41" lean-forward="true" selection-start-line="183" selection-start-column="41" selection-end-line="183" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16777#16913#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#16877#16894#0" expanded="true" />
+            <element signature="e#24119#24162#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77044#77130#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#77232#77330#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
+            <element signature="e#81605#81685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/ValidTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-231">
+          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/PerformanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="711">
+          <caret line="122" column="21" lean-forward="true" selection-start-line="122" selection-start-column="21" selection-end-line="122" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1789#1806#0" expanded="true" />
+            <element signature="e#2124#2266#0" expanded="true" />
+            <element signature="e#2124#2266#0" expanded="true" />
+            <element signature="e#2124#2266#0" expanded="true" />
+            <element signature="e#2201#2216#0" expanded="true" />
+            <element signature="e#2124#2266#0" expanded="true" />
+            <element signature="e#2201#2216#0" expanded="true" />
+            <element signature="e#2325#2523#0" expanded="true" />
+            <element signature="e#2325#2523#0" expanded="true" />
+            <element signature="e#2325#2523#0" expanded="true" />
+            <element signature="e#2325#2523#0" expanded="true" />
+            <element signature="e#2429#2513#0" expanded="true" />
+            <element signature="e#2448#2463#0" expanded="true" />
+            <element signature="e#2448#2463#0" expanded="true" />
+            <element signature="e#2429#2513#0" expanded="true" />
+            <element signature="e#2724#2741#0" expanded="true" />
+            <element signature="e#3130#3468#0" expanded="true" />
+            <element signature="e#3130#3468#0" expanded="true" />
+            <element signature="e#3130#3468#0" expanded="true" />
+            <element signature="e#3130#3468#0" expanded="true" />
+            <element signature="e#3234#3458#0" expanded="true" />
+            <element signature="e#3254#3269#0" expanded="true" />
+            <element signature="e#3254#3269#0" expanded="true" />
+            <element signature="e#3234#3458#0" expanded="true" />
+            <element signature="e#3315#3444#0" expanded="true" />
+            <element signature="e#3315#3444#0" expanded="true" />
+            <element signature="e#3370#3398#0" expanded="true" />
+            <element signature="e#3374#3390#0" expanded="true" />
+            <element signature="e#3374#3390#0" expanded="true" />
+            <element signature="e#3370#3398#0" expanded="true" />
+            <element signature="e#3695#3712#0" expanded="true" />
+            <element signature="e#3944#3957#0" expanded="true" />
+            <element signature="e#3944#3957#0" expanded="true" />
+            <element signature="e#4049#4260#0" expanded="true" />
+            <element signature="e#4049#4260#0" expanded="true" />
+            <element signature="e#4049#4260#0" expanded="true" />
+            <element signature="e#4049#4260#0" expanded="true" />
+            <element signature="e#4161#4250#0" expanded="true" />
+            <element signature="e#4180#4195#0" expanded="true" />
+            <element signature="e#4180#4195#0" expanded="true" />
+            <element signature="e#4161#4250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#415#603#0" expanded="true" />
+            <element signature="e#415#603#0" expanded="true" />
+            <element signature="e#415#603#0" expanded="true" />
+            <element signature="e#415#603#0" expanded="true" />
+            <element signature="e#415#603#0" expanded="true" />
+            <element signature="method#testRemoce#0;class#RankTest#0" />
+            <element signature="e#721#977#0" expanded="true" />
+            <element signature="e#721#977#0" expanded="true" />
+            <element signature="e#721#977#0" expanded="true" />
+            <element signature="e#721#977#0" expanded="true" />
+            <element signature="e#721#977#0" expanded="true" />
+            <element signature="method#performancePut#0;class#RankTest#0" />
+            <element signature="e#1082#1350#0" expanded="true" />
+            <element signature="e#1082#1350#0" expanded="true" />
+            <element signature="e#1082#1350#0" expanded="true" />
+            <element signature="e#1082#1350#0" expanded="true" />
+            <element signature="e#1082#1350#0" expanded="true" />
+            <element signature="method#performanceRemove#0;class#RankTest#0" />
+            <element signature="e#1527#1801#0" expanded="true" />
+            <element signature="e#1527#1801#0" expanded="true" />
+            <element signature="e#1527#1801#0" expanded="true" />
+            <element signature="e#1527#1801#0" expanded="true" />
+            <element signature="e#1527#1801#0" expanded="true" />
+            <element signature="e#1976#2246#0" expanded="true" />
+            <element signature="e#1976#2246#0" expanded="true" />
+            <element signature="e#1976#2246#0" expanded="true" />
+            <element signature="e#1976#2246#0" expanded="true" />
+            <element signature="e#1976#2246#0" expanded="true" />
           </folding>
         </state>
       </provider>
