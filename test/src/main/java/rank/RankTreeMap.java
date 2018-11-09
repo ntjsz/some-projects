@@ -179,6 +179,9 @@ public class RankTreeMap<K, V>
         return (p == null ? null : p.value);
     }
 
+    /**
+     * 0 based
+     */
     public int rank(Object key) {
         Entry<K, V> p = getEntry(key);
         return (p == null ? -1 : p.getRank());
@@ -686,9 +689,12 @@ public class RankTreeMap<K, V>
     }
 
     /**
+     * 0 based
      * entry的key会在remove时变化，此方法谨慎使用
      */
     public static <K, V> int getRank(Map.Entry<K, V> entry) {
+        if (entry == null) return -1;
+
         if (!(entry instanceof RankTreeMap.Entry)) {
             throw new UnsupportedOperationException("entry is not instanceof RankTreeMap.Entry");
         }
@@ -2145,6 +2151,9 @@ public class RankTreeMap<K, V>
             return value;
         }
 
+        /**
+         * 0 based
+         */
         public int getRank() {
             int rank = 0;
             if (this.left != null) rank += this.left.size;

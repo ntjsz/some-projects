@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0526271c-b91d-46d4-9721-72e45614a4e6" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/test/src/main/java/rank/test/PerformanceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/src/main/java/rank/test/ValidTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/src/main/java/RankTreeMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/src/main/java/rank/RankTreeMap.java" afterDir="false" />
-    </list>
+    <list default="true" id="0526271c-b91d-46d4-9721-72e45614a4e6" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/test/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +16,8 @@
       <file leaf-file-name="RankTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="714">
-              <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+            <state relative-caret-position="105">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#415#603#0" expanded="true" />
@@ -197,8 +191,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1860" />
-    <option name="y" value="-20" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1874" />
     <option name="height" value="1096" />
   </component>
@@ -433,15 +427,15 @@
       <workItem from="1541402165477" duration="916000" />
       <workItem from="1541433417767" duration="2618000" />
       <workItem from="1541557634486" duration="1679000" />
-      <workItem from="1541667142328" duration="18919000" />
+      <workItem from="1541667142328" duration="19809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24132000" />
+    <option name="totallyTimeSpent" value="25022000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1866" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1874" height="1096" extended-state="6" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" weight="0.3297414" />
@@ -453,12 +447,12 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16426194" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24306326" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39978448" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978448" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -754,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/src/main/java/rank/test/RankTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="714">
-          <caret line="69" column="22" lean-forward="true" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+        <state relative-caret-position="105">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#415#603#0" expanded="true" />
